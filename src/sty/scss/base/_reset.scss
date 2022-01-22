@@ -1,0 +1,31 @@
+// reset margins
+%remove-margin-y {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+%remove-margin-x {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+%remove-margin {
+	@extend %remove-margin-y;
+	@extend %remove-margin-x;
+}
+
+// reset paddings
+%remove-padding-y {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+%remove-padding-x {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+%remove-padding {
+	@extend %remove-padding-y;
+	@extend %remove-padding-x;
+}
