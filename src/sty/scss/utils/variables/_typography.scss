@@ -1,0 +1,19 @@
+// fallbacks
+$font-family-sans-fallback: (-apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace);
+$font-family-mono-fallback: ('SF Mono', 'Andale Mono', 'Roboto Mono', 'Ubuntu Mono', 'Noto Mono', 'monospace', monospace, serif, $font-family-sans-fallback);
+
+// font families
+$font-family-sans: ('Cantarell', 'DejaVu Sans', $font-family-sans-fallback);
+$font-family-mono: ('Hack', 'DejaVu Sans Mono', $font-family-mono-fallback);
+
+// font sizes
+$font-size-raw-root: 16;
+$font-size-raw-html: 16;
+$font-size-raw-body: 14;
+$font-size-raw-p: 14;
+$font-size-raw-h6: 14;
+$font-size-raw-h5: 16;
+$font-size-raw-h4: 18;
+$font-size-raw-h3: 21;
+$font-size-raw-h2: 24;
+$font-size-raw-h1: 28;
