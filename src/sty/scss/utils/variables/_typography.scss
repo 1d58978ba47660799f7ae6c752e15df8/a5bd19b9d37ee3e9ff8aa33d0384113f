@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // fallbacks
 $font-family-sans-fallback: (-apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace);
 $font-family-mono-fallback: ('SF Mono', 'Andale Mono', 'Roboto Mono', 'Ubuntu Mono', 'Noto Mono', 'monospace', monospace, serif, $font-family-sans-fallback);
@@ -17,3 +19,25 @@ $font-size-raw-h4: 18;
 $font-size-raw-h3: 21;
 $font-size-raw-h2: 24;
 $font-size-raw-h1: 28;
+$font-size-raw-small: 12;
+
+$font-size-root: ($font-size-raw-root * 1px);
+$font-size-html: (math.div($font-size-raw-html, $font-size-raw-root) * 1em);
+$font-size-body: (math.div($font-size-raw-body, $font-size-raw-html) * 1em);
+$font-size-p: (math.div($font-size-raw-p, $font-size-raw-body) * 1em);
+$font-size-h6: (math.div($font-size-raw-h6, $font-size-raw-body) * 1em);
+$font-size-h5: (math.div($font-size-raw-h5, $font-size-raw-body) * 1em);
+$font-size-h4: (math.div($font-size-raw-h4, $font-size-raw-body) * 1em);
+$font-size-h3: (math.div($font-size-raw-h3, $font-size-raw-body) * 1em);
+$font-size-h2: (math.div($font-size-raw-h2, $font-size-raw-body) * 1em);
+$font-size-h1: (math.div($font-size-raw-h1, $font-size-raw-body) * 1em);
+$font-size-small: (math.div($font-size-raw-small, $font-size-raw-body) * 1em);
+
+$line-height-body: $font-size-h3;
+$line-height-heading: $font-size-h5;
+
+$letter-spacing: 0;
+
+$font-weight-regular: normal;
+$font-weight-bold: bold;
+$font-weight-boldex: bolder;

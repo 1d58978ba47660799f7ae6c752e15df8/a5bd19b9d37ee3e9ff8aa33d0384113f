@@ -1,0 +1,111 @@
+@use 'sass:math';
+@use '../utils/variables/typography' as *;
+@use 'reset' as *;
+
+%case-small-small {
+	small {
+		font-size: 1em;
+	}
+}
+
+%case-small-normal {
+	small {
+		font-size: $font-size-small;
+	}
+}
+
+@mixin generate-type($ua-size, $ua-style, $ua-weight, $ua-track, $ua-height, $size, $style, $weight, $track, $height, $sp-y, $sp-x) {
+	@if $sp-y and not $sp-x {
+		@extend %remove-margin-y;
+	} @else if $sp-x and not $sp-y {
+		@extend %remove-margin-x;
+	} @else if ($sp-x and $sp-y) {
+		@extend %remove-margin;
+	}
+
+	font-family: $font-family-sans;
+	
+	@if ($ua-size != $size) {
+		font-size: $size;
+	}
+
+	@if ($ua-style != $style) {
+		font-style: $style;
+	}
+
+	@if ($ua-weight != $weight) {
+		font-weight: $weight;
+	}
+
+	@if ($ua-track != $track) {
+		letter-spacing: $track;
+	}
+
+	@if ($ua-height != $height) {
+		line-height: $height;
+	}
+
+
+	$size-unit: unit($size);
+	$uasize-unit: unit($ua-size);
+
+	@if ($size-unit == 'px') {
+		$size: (math.div($size, 16px) * 1em);
+	}
+
+	@if ($ua-size != $size) {
+		@if ($size <= $font-size-h5) {
+			@extend %case-small-small;
+		} @else if ($size > $font-size-h5) {
+			@extend %case-small-normal;
+		}
+	} @else {
+		@if ($ua-size <= $font-size-h5) {
+			@extend %case-small-small;
+		} @else if ($ua-size > $font-size-h5) {
+			@extend %case-small-normal;
+		}
+	}
+}
+
+
+
+:root {
+	@include generate-type(16px, normal, normal, 0, 1.5em, $font-size-root, normal, $font-weight-regular, $letter-spacing, $line-height-body, false, false);
+}
+
+html {
+	@include generate-type(1em, normal, normal, 0, 1.5em, $font-size-html, normal, $font-weight-regular, $letter-spacing, $line-height-body, false, false);
+}
+
+body {
+	@include generate-type((math.div(16, 16) * 1em), normal, normal, 0, (math.div(20, 16) * 1em), $font-size-body, normal, $font-weight-regular, $letter-spacing, $line-height-body, true, true);
+}
+
+p {
+	@include generate-type((math.div(16, 16) * 1em), normal, normal, 0, (math.div(20, 16) * 1em), $font-size-p, normal, $font-weight-regular, $letter-spacing, $line-height-body, true, false);
+}
+
+h1 {
+	@include generate-type((math.div(32, 16) * 1em), normal, bold, 0, (math.div(39, 32) * 1em), $font-size-h1, normal, $font-weight-bold, $letter-spacing, $line-height-heading, true, false);
+}
+
+h2 {
+	@include generate-type((math.div(24, 16) * 1em), normal, bold, 0, (math.div(30, 24) * 1em), $font-size-h2, normal, $font-weight-bold, $letter-spacing, $line-height-heading, true, false);
+}
+
+h3 {
+	@include generate-type((math.div(18.72, 16) * 1em), normal, bold, 0, (math.div(24, 18.72) * 1em), $font-size-h3, normal, $font-weight-bold, $letter-spacing, $line-height-heading, true, false);
+}
+
+h4 {
+	@include generate-type((math.div(16, 16) * 1em), normal, bold, 0, (math.div(20, 16) * 1em), $font-size-h4, normal, $font-weight-bold, $letter-spacing, $line-height-heading, true, false);
+}
+
+h5 {
+	@include generate-type((math.div(13.28, 16) * 1em), normal, bold, 0, (math.div(17, 13.28) * 1em), $font-size-h5, normal, $font-weight-bold, $letter-spacing, $line-height-heading, true, false);
+}
+
+h6 {
+	@include generate-type((math.div(10.72, 16) * 1em), normal, bold, 0, (math.div(14, 10.72) * 1em), $font-size-h6, normal, $font-weight-bold, $letter-spacing, $line-height-heading, true, false);
+}

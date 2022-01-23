@@ -1,0 +1,83 @@
+p, h1, h2, h3, h4, h5, h6, body {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+body {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+button small, h6 small, h5 small, p small, body small, html small, :root small {
+  font-size: 1em;
+}
+
+h4 small, h3 small, h2 small, h1 small {
+  font-size: 0.8571428571em;
+}
+
+:root {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+}
+
+html {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+}
+
+body {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  font-size: 0.875em;
+  line-height: 1.5em;
+}
+
+p {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  line-height: 1.1428571429em;
+}
+
+h2 {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  font-size: 1.7142857143em;
+  line-height: 1.1428571429em;
+}
+
+h3 {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  font-size: 1.5em;
+  line-height: 1.1428571429em;
+}
+
+h4 {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  font-size: 1.2857142857em;
+  line-height: 1.1428571429em;
+}
+
+h5 {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  font-size: 1.1428571429em;
+  line-height: 1.1428571429em;
+}
+
+h6 {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  font-size: 1em;
+  line-height: 1.1428571429em;
+}
+
+button {
+  font-family: "Cantarell", "DejaVu Sans", -apple-system, BlinkMacSystemFont, X-LocaleSpecific, system-ui, sans-serif, serif, monospace;
+  font-size: 1em;
+  font-weight: bolder;
+  line-height: 1.5em;
+  border: 0.0625em solid currentColor;
+  border-radius: 0.375em;
+  padding: 0.375em 1.125em;
+}
+
+/*# sourceMappingURL=8e597bd09c81471d6bf13321af5ca884.css.map */

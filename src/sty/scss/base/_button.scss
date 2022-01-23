@@ -1,0 +1,13 @@
+@use 'sass:math';
+@use 'typography' as *;
+@use '../utils/variables/typography' as *;
+
+button {
+	@include generate-type((math.div(13.3333, 16) * 1em), normal, normal, 0, (math.div(23, 13.3333) * 1em), $font-size-p, normal, $font-weight-boldex, $letter-spacing, $line-height-body, false, false);
+
+	$pad: (math.div(6, 16) * 1em);
+
+	border: (math.div(1, 16) * 1em) solid currentColor;
+	border-radius: $pad;
+	padding: ($pad * 1) ($pad * 3);
+}
